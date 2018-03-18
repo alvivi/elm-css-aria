@@ -1,0 +1,406 @@
+[
+  {
+    "name": "Html.Styled.Attributes.Aria",
+    "comment": " An ongoing effor to port all Aria attributes to elm-css.\n\n**NOTE** Some Aria attributes have HTML 5 counterparts with the same\nsemantic, like `aria-required` and `required`. These kind of attributes are\nintentionally not include here.\n\n\n# Primary\n\n@docs label, role\n\n\n# Relationships\n\n@docs IdReference, describedBy, labeledBy\n\n\n# Widget states and properties\n\n@docs expanded, hasPopup, invalid\n\n\n# User interface properties\n\n@docs hidden\n\n",
+    "aliases": [
+      {
+        "name": "IdReference",
+        "comment": " Reference to the ID of another element in the same document. More info at\n<https://www.w3.org/TR/wai-aria/#valuetype_idref>.\n",
+        "args": [],
+        "type": "String"
+      }
+    ],
+    "types": [],
+    "values": [
+      {
+        "name": "describedBy",
+        "comment": " Identifies the element (or elements) that describes the object. More info at\n<https://www.w3.org/TR/wai-aria/#aria-describedby>.\n",
+        "type": "List Html.Styled.Attributes.Aria.IdReference -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "expanded",
+        "comment": " Indicates whether the element, or another grouping element it controls, is\ncurrently expanded or collapsed. More info at\n<https://www.w3.org/TR/wai-aria/#aria-expanded>.\n",
+        "type": "Bool -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "hasPopup",
+        "comment": " Indicates the availability and type of interactive popup element, such as\nmenu or dialog, that can be triggered by an element.\n<https://www.w3.org/TR/wai-aria/#aria-haspopup>.\n",
+        "type": "Html.Styled.Attributes.Aria.Popup.Popup -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "hidden",
+        "comment": " Indicates whether the element is exposed to an accessibility API. More info\nat <https://www.w3.org/TR/wai-aria/#aria-hidden>.\n**NOTE**: Authors are advised to use extreme caution and consider a wide range\nof disabilities when hiding visibly rendered content from assistive\ntechnologies.\n",
+        "type": "Bool -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "invalid",
+        "comment": " Indicates the entered value does not conform to the format expected by the\napplication. More info at <https://www.w3.org/TR/wai-aria/#aria-invalid>\n",
+        "type": "Html.Styled.Attributes.Aria.Invalid.Invalid -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "label",
+        "comment": " Defines a string value that labels the current element. More info at\n<https://www.w3.org/TR/wai-aria/#aria-label>.\n",
+        "type": "String -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "labeledBy",
+        "comment": " Identifies the element (or elements) that labels the current element. More\ninfo at <https://www.w3.org/TR/wai-aria/#aria-labelby>.\n",
+        "type": "List Html.Styled.Attributes.Aria.IdReference -> Html.Styled.Attribute msg"
+      },
+      {
+        "name": "role",
+        "comment": " Sets the type of an element. More info at\n<https://www.w3.org/TR/html-aria/#allowed-aria-roles-states-and-properties>.\n",
+        "type": "Html.Styled.Attributes.Aria.Role.Role -> Html.Styled.Attribute msg"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Html.Styled.Attributes.Aria.Role",
+    "comment": " Role of an element.\n\n@docs Role\n\n",
+    "aliases": [],
+    "types": [
+      {
+        "name": "Role",
+        "comment": " Role of an element. More info at\n<https://www.w3.org/TR/html-aria/#aria-table>.\n",
+        "args": [],
+        "cases": [
+          [
+            "Any",
+            []
+          ],
+          [
+            "Alert",
+            []
+          ],
+          [
+            "Alertdialog",
+            []
+          ],
+          [
+            "Application",
+            []
+          ],
+          [
+            "Article",
+            []
+          ],
+          [
+            "Banner",
+            []
+          ],
+          [
+            "Button",
+            []
+          ],
+          [
+            "Checkbox",
+            []
+          ],
+          [
+            "Cell",
+            []
+          ],
+          [
+            "Columnheader",
+            []
+          ],
+          [
+            "Combobox",
+            []
+          ],
+          [
+            "Complementary",
+            []
+          ],
+          [
+            "Contentinfo",
+            []
+          ],
+          [
+            "Definition",
+            []
+          ],
+          [
+            "Dialog",
+            []
+          ],
+          [
+            "Directory",
+            []
+          ],
+          [
+            "Document",
+            []
+          ],
+          [
+            "Feed",
+            []
+          ],
+          [
+            "Figure",
+            []
+          ],
+          [
+            "Form",
+            []
+          ],
+          [
+            "Group",
+            []
+          ],
+          [
+            "Heading",
+            []
+          ],
+          [
+            "Img",
+            []
+          ],
+          [
+            "Link",
+            []
+          ],
+          [
+            "List",
+            []
+          ],
+          [
+            "Listbox",
+            []
+          ],
+          [
+            "Listitem",
+            []
+          ],
+          [
+            "Log",
+            []
+          ],
+          [
+            "Main",
+            []
+          ],
+          [
+            "Marquee",
+            []
+          ],
+          [
+            "Math",
+            []
+          ],
+          [
+            "Menu",
+            []
+          ],
+          [
+            "Menuitem",
+            []
+          ],
+          [
+            "Menuitemcheckbox",
+            []
+          ],
+          [
+            "Menuitemradio",
+            []
+          ],
+          [
+            "Navigation",
+            []
+          ],
+          [
+            "None",
+            []
+          ],
+          [
+            "Note",
+            []
+          ],
+          [
+            "Option",
+            []
+          ],
+          [
+            "Presentation",
+            []
+          ],
+          [
+            "Progressbar",
+            []
+          ],
+          [
+            "Radio",
+            []
+          ],
+          [
+            "Radiogroup",
+            []
+          ],
+          [
+            "Region",
+            []
+          ],
+          [
+            "Row",
+            []
+          ],
+          [
+            "Rowgroup",
+            []
+          ],
+          [
+            "Rowheader",
+            []
+          ],
+          [
+            "Scrollbar",
+            []
+          ],
+          [
+            "Search",
+            []
+          ],
+          [
+            "Searchbox",
+            []
+          ],
+          [
+            "Separator",
+            []
+          ],
+          [
+            "Slider",
+            []
+          ],
+          [
+            "Spinbutton",
+            []
+          ],
+          [
+            "Statu",
+            []
+          ],
+          [
+            "Switch",
+            []
+          ],
+          [
+            "Tab",
+            []
+          ],
+          [
+            "Table",
+            []
+          ],
+          [
+            "Tablist",
+            []
+          ],
+          [
+            "Tabpanel",
+            []
+          ],
+          [
+            "Term",
+            []
+          ],
+          [
+            "Textbox",
+            []
+          ],
+          [
+            "Toolbar",
+            []
+          ],
+          [
+            "Tooltip",
+            []
+          ],
+          [
+            "Tree",
+            []
+          ],
+          [
+            "Treegrid",
+            []
+          ],
+          [
+            "Treeitem",
+            []
+          ]
+        ]
+      }
+    ],
+    "values": [],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Html.Styled.Attributes.Aria.Popup",
+    "comment": " The type of interactive popup element.\n\n@docs Popup\n\n",
+    "aliases": [],
+    "types": [
+      {
+        "name": "Popup",
+        "comment": " Invalid reasons used by invalid. More info at\n<https://www.w3.org/TR/wai-aria/#aria-haspopup>.\n",
+        "args": [],
+        "cases": [
+          [
+            "Dialog",
+            []
+          ],
+          [
+            "Grid",
+            []
+          ],
+          [
+            "Listbox",
+            []
+          ],
+          [
+            "Menu",
+            []
+          ],
+          [
+            "Tree",
+            []
+          ]
+        ]
+      }
+    ],
+    "values": [],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Html.Styled.Attributes.Aria.Invalid",
+    "comment": " The type of invalid states.\n\n@docs Invalid\n\n",
+    "aliases": [],
+    "types": [
+      {
+        "name": "Invalid",
+        "comment": " The type of invalid states, uses by invalid. More info at\n<https://www.w3.org/TR/wai-aria/#aria-invalid>.\n",
+        "args": [],
+        "cases": [
+          [
+            "Grammar",
+            []
+          ],
+          [
+            "Invalid",
+            []
+          ],
+          [
+            "Spelling",
+            []
+          ],
+          [
+            "Valid",
+            []
+          ]
+        ]
+      }
+    ],
+    "values": [],
+    "generated-with-elm-version": "0.18.0"
+  }
+]
