@@ -10,6 +10,7 @@ module Html.Styled.Attributes.Aria
         , label
         , labeledBy
         , role
+        , selected
         )
 
 {-| An ongoing effor to port all Aria attributes to elm-css.
@@ -31,7 +32,7 @@ intentionally not include here.
 
 # Widget states and properties
 
-@docs expanded, hasPopup, invalid
+@docs expanded, hasPopup, invalid, selected
 
 
 # User interface properties
@@ -130,6 +131,14 @@ labeledBy =
 role : Role -> Attribute msg
 role =
     roleToString >> H.attribute "role"
+
+
+{-| Indicates the current "selected" state of various widgets.
+<https://www.w3.org/TR/wai-aria/#aria-selected>.
+-}
+selected : Bool -> Attribute msg
+selected =
+    boolToString >> H.attribute "aria-selected"
 
 
 
