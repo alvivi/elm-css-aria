@@ -1,6 +1,7 @@
 module Html.Styled.Attributes.Aria
     exposing
         ( IdReference
+        , activeDescendant
         , describedBy
         , expanded
         , hasPopup
@@ -25,7 +26,7 @@ intentionally not include here.
 
 # Relationships
 
-@docs IdReference, describedBy, labeledBy
+@docs IdReference, activeDescendant, describedBy, labeledBy
 
 
 # Widget states and properties
@@ -51,6 +52,15 @@ import Html.Styled.Attributes.Aria.Role as Role exposing (Role)
 -}
 type alias IdReference =
     String
+
+
+{-| Identifies the currently active element when DOM focus is on a composite
+widget, textbox, group, or application.
+<https://www.w3.org/TR/wai-aria/#aria-activedescendant>.
+-}
+activeDescendant : String -> Attribute msg
+activeDescendant =
+    H.attribute "aria-activedescendant"
 
 
 {-| Identifies the element (or elements) that describes the object. More info at
