@@ -2,6 +2,7 @@ module Html.Styled.Attributes.Aria
     exposing
         ( IdReference
         , activeDescendant
+        , controls
         , describedBy
         , expanded
         , hasPopup
@@ -14,7 +15,7 @@ module Html.Styled.Attributes.Aria
         , selected
         )
 
-{-| An ongoing effor to port all Aria attributes to elm-css.
+{-| An ongoing effort to port all Aria attributes to elm-css.
 
 **NOTE** Some Aria attributes have HTML 5 counterparts with the same
 semantic, like `aria-required` and `required`. These kind of attributes are
@@ -28,7 +29,7 @@ intentionally not include here.
 
 # Relationships
 
-@docs IdReference, activeDescendant, describedBy, labeledBy
+@docs IdReference, activeDescendant, controls, describedBy, labeledBy
 
 
 # Widget states and properties
@@ -63,6 +64,14 @@ widget, textbox, group, or application.
 activeDescendant : String -> Attribute msg
 activeDescendant =
     H.attribute "aria-activedescendant"
+
+
+{-| Identifies the element (or elements) whose contents or presence are
+controlled by the current element.
+-}
+controls : List IdReference -> Attribute msg
+controls =
+    String.join " " >> H.attribute "aria-controls"
 
 
 {-| Identifies the element (or elements) that describes the object. More info at
