@@ -180,7 +180,7 @@ popupToString popup =
         Popup.Grid ->
             "grid"
 
-        Popup.Listbox ->
+        Popup.ListBox ->
             "listbox"
 
         Popup.Menu ->

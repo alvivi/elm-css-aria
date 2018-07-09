@@ -13,6 +13,6 @@ module Html.Styled.Attributes.Aria.Popup exposing (Popup(..))
 type Popup
     = Dialog
     | Grid
-    | Listbox
+    | ListBox
     | Menu
     | Tree
