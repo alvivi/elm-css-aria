@@ -10,6 +10,7 @@ module Html.Styled.Attributes.Aria
         , invalid
         , label
         , labelledBy
+        , modal
         , pressed
         , role
         , selected
@@ -34,7 +35,7 @@ intentionally not include here.
 
 # Widget states and properties
 
-@docs expanded, hasPopup, invalid, pressed, selected
+@docs expanded, hasPopup, invalid, modal, pressed, selected
 
 
 # User interface properties
@@ -133,6 +134,14 @@ info at <https://www.w3.org/TR/wai-aria/#aria-labellby>.
 labelledBy : List IdReference -> Attribute msg
 labelledBy =
     String.join " " >> H.attribute "aria-labelledby"
+
+
+{-| Indicates whether an element is modal when displayed.
+info at <https://www.w3.org/TR/wai-aria/#aria-modal>.
+-}
+modal : Bool -> Attribute msg
+modal =
+    boolToString >> H.attribute "aria-modal"
 
 
 {-| Indicates the current "pressed" state of toggle buttons.
