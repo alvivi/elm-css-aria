@@ -9,7 +9,7 @@ module Html.Styled.Attributes.Aria
         , hidden
         , invalid
         , label
-        , labeledBy
+        , labelledBy
         , pressed
         , role
         , selected
@@ -29,7 +29,7 @@ intentionally not include here.
 
 # Relationships
 
-@docs IdReference, activeDescendant, controls, describedBy, labeledBy
+@docs IdReference, activeDescendant, controls, describedBy, labelledBy
 
 
 # Widget states and properties
@@ -128,10 +128,10 @@ label =
 
 
 {-| Identifies the element (or elements) that labels the current element. More
-info at <https://www.w3.org/TR/wai-aria/#aria-labelby>.
+info at <https://www.w3.org/TR/wai-aria/#aria-labellby>.
 -}
-labeledBy : List IdReference -> Attribute msg
-labeledBy =
+labelledBy : List IdReference -> Attribute msg
+labelledBy =
     String.join " " >> H.attribute "aria-labelledby"
 
 
